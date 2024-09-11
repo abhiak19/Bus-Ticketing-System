@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bus Ticketing System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+
+<body class="flex justify-center h-screen items-center">
+    <div class="flex flex-col items-center p-2">
+        <div id="finalTicket" class="border-black border-2 rounded-lg p-4">
+            <h1 class="font-bold font-serif text-center text-3xl">(Bus Service Line)</h1>
+            <h2 class="font-serif text-center text-xl">(Bus Route Line)</h2>
+            <div class="flex justify-between pt-8 mx-3">
+                <h4 class="text-sm pr-3">Ticket no - <span id="ticketNo">0/2300</span></h4>
+                <div class="flex flex-col">
+                    <h4 id="date" class="text-sm pb-2">Date - 11/09/2024</h4>
+                    <h4 id="time" class="text-sm">Time - 11:53am</h4>
+                </div>
+            </div>
+            <div class="flex items-center pt-6 ml-3">
+                <h4 class="text-sm pr-2">From-</h4>
+                <input type="text" size="10" placeholder="Starting Point" class="text-sm mr-3 border-b border-gray-400">
+                <h4 class="text-sm pr-2">To-</h4>
+                <input type="text" size="10" placeholder="Destination" class="text-sm mr-3 border-b border-gray-400">
+            </div>
+            <div class="flex items-center pt-7 ml-3">
+                <h4 class="text-sm pr-3">Adult-</h4>
+                <input type="text" size="6" placeholder="Adult no" class="text-sm mr-2 border-b border-gray-400">
+                <h4 class="text-sm pr-3">Child-</h4>
+                <input type="text" size="5" placeholder="Child no" class="text-sm mr-3 border-b border-gray-400">
+                <h4 class="text-sm pr-3">Lug-</h4>
+                <input type="text" size="8" placeholder="Luggage no" class="text-sm mr-3 border-b border-gray-400">
+            </div>
+            <h1 class="font-bold text-2xl ml-20 pt-8 pb-4">Fare:</h1>
+        </div>
+
+        <button onClick="printAndRefresh()"
+            class="mt-3 font-bold border-black border-2 p-2 bg-green-600 text-white rounded-lg">Print Ticket
+        </button>
+
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
